@@ -8,29 +8,40 @@
 
   <title>Frontend Mentor | Contact form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
 
+<!--Title-->
+
     <h1>Contact Us</h1>
 
+<!--Form-->
+
     <form action="" method="post">
+
+      <!--first name-->
+
       <label for="first-name">First Name</label>
       <input id="first-name" type="text" required>
       <span class="error">This field is required</span>
+
+      <!--last name-->
 
       <label for="last-name">Last Name</label>
       <input id="last-name" type="text" required>
       <span class="error">This field is required</span>
 
+      <!--email address-->
+
       <label for="email-address">Email Address</label>
       <input id="email-address" type="email" required>
       <span class="error">Please enter a valid email address</span>
       <span class="error">This field is required</span>
+
+      <!--query type-->
 
       <fieldset>
         <legend>Query Type</legend>
@@ -44,21 +55,31 @@
         <span class="error">Please select a query type</span>
       </fieldset>
 
+      <!--message-->
+
       <label for="message">Message</label>
       <textarea id="message" required></textarea>
       <span class="error">This field is required</span>
+
+      <!--checkbox-->
 
       <input type="checkbox" id="consent" required>
       <label for="consent">I consent to being contacted by the team</label>
       <span class="error">To submit this form, please consent to being contacted</span>
 
+      <!--submit button-->
+
       <button type="submit">Submit</button>
     </form>
+
+<!--success message-->
 
     <div role="alert" class="success hidden">
       <h3>Message sent!</h3>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
+
+<!--attributions-->
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
@@ -66,5 +87,6 @@
   </footer>
 
   </main>
+  
 </body>
 </html>
