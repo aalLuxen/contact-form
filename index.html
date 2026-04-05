@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Contact form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,39 +14,59 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
+  <main>
 
-  Contact Us
+    <h1>Contact Us</h1>
 
-  First Name
-  This field is required
+    <form action="" method="post">
+      <label for="first-name">First Name</label>
+      <input id="first-name" type="text" required>
+      <span class="error">This field is required</span>
 
-  Last Name
-  This field is required
+      <label for="last-name">Last Name</label>
+      <input id="last-name" type="text" required>
+      <span class="error">This field is required</span>
 
-  Email Address
-  Please enter a valid email address
-  This field is required
+      <label for="email-address">Email Address</label>
+      <input id="email-address" type="email" required>
+      <span class="error">Please enter a valid email address</span>
+      <span class="error">This field is required</span>
 
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
+      <fieldset>
+        <legend>Query Type</legend>
 
-  Message
-  This field is required
+        <label for="general-enquiry">General Enquiry</label>
+        <input type="radio" name="query-type" id="general-enquiry" required>
 
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
+        <label for="support-request">Support Request</label>
+        <input type="radio" name="query-type" id="support-request" required>
 
-  Submit
+        <span class="error">Please select a query type</span>
+      </fieldset>
 
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
+      <label for="message">Message</label>
+      <textarea id="message" required></textarea>
+      <span class="error">This field is required</span>
+
+      <input type="checkbox" id="consent" required>
+      <label for="consent">I consent to being contacted by the team</label>
+      <span class="error">To submit this form, please consent to being contacted</span>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div role="alert" class="success hidden">
+      <h3>Message sent!</h3>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/aalLuxen">Angel Albedo L.</a>.
   </footer>
+
+  </main>
 </body>
 </html>
