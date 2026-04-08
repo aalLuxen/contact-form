@@ -8,42 +8,58 @@
 
   <title>Frontend Mentor | Contact form</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <main>
 
-<!--Title-->
-
-    <h1>Contact Us</h1>
-
 <!--Form-->
 
     <form action="" method="post">
 
+      <!--Title-->
+
+      <h1>Contact Us</h1>
+
       <!--first name-->
 
-      <label for="first-name">First Name</label>
-      <input id="first-name" type="text" required>
-      <span class="error">This field is required</span>
+      <div class="field">
+
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" required>
+        <span class="error">This field is required</span>
+
+      </div>
 
       <!--last name-->
 
-      <label for="last-name">Last Name</label>
-      <input id="last-name" type="text" required>
-      <span class="error">This field is required</span>
+      <div class="field">
+
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" required>
+        <span class="error">This field is required</span>
+
+      </div>
 
       <!--email address-->
 
-      <label for="email-address">Email Address</label>
-      <input id="email-address" type="email" required>
-      <span class="error">Please enter a valid email address</span>
-      <span class="error">This field is required</span>
+      <div class="fullfield">
+
+        <label for="email-address">Email Address</label>
+        <input id="email-address" type="email" required>
+        <span class="error">Please enter a valid email address</span>
+        <span class="error">This field is required</span>
+
+      </div>
 
       <!--query type-->
 
-      <fieldset>
+      <fieldset class="field">
         <legend>Query Type</legend>
 
         <label for="general-enquiry">General Enquiry</label>
@@ -57,15 +73,21 @@
 
       <!--message-->
 
-      <label for="message">Message</label>
-      <textarea id="message" required></textarea>
-      <span class="error">This field is required</span>
+      <div class="fullfield">
+
+        <label for="message">Message</label>
+        <textarea id="message" required></textarea>
+        <span class="error">This field is required</span>
+
+      </div>
 
       <!--checkbox-->
 
-      <input type="checkbox" id="consent" required>
-      <label for="consent">I consent to being contacted by the team</label>
-      <span class="error">To submit this form, please consent to being contacted</span>
+      <div class="fullfield">
+        <input type="checkbox" id="consent" required>
+        <label for="consent">I consent to being contacted by the team</label>
+        <span class="error">To submit this form, please consent to being contacted</span>
+      </div>
 
       <!--submit button-->
 

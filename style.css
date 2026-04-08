@@ -1,15 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+:root {
+    --green-200: hsl(148, 38%, 91%);
+    --green-600: hsl(169, 82%, 27%);
+    --red: hsl(0, 66%, 54%);
 
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(186, 15%, 59%);
+    --grey-900: hsl(187, 24%, 22%);
+}
 
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--green-200);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+main {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 750px;
+}
 
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
 
+}
 
+form h1 {
+    grid-column: 1 / -1;
+    text-align: left;
+    color: var(--grey-900);
+    margin-bottom: 1rem;
+}
 
+.fullfield {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+fieldset {
+    display: flex;
+}
+
+legend::after {
+    content: " *";
+    color: var(--green-600);
+}
+
+input {
+    border: 1px solid var(--grey-500);
+    border-radius: 0.25rem;
+    padding: 0.6rem;
+    width: 100%;
+}
+
+label:not(fieldset label)::after {
+    content: " *";
+    color: var(--green-600);
+}
+
+.error {
+    display: none;
+}
+
+.error.visible {
+    display: block;
+    color: var(--red);
+}
 
 
 
 
 .attribution { font-size: 0.6875rem; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { color: hsl(210, 3%, 12%); }
