@@ -28,7 +28,7 @@
 
       <!--first name-->
 
-      <div class="field">
+      <div class="namesfield">
 
         <label for="first-name">First Name</label>
         <input id="first-name" type="text" required>
@@ -38,7 +38,7 @@
 
       <!--last name-->
 
-      <div class="field">
+      <div class="namesfield">
 
         <label for="last-name">Last Name</label>
         <input id="last-name" type="text" required>
@@ -48,7 +48,7 @@
 
       <!--email address-->
 
-      <div class="fullfield">
+      <div class="emailfield">
 
         <label for="email-address">Email Address</label>
         <input id="email-address" type="email" required>
@@ -59,21 +59,26 @@
 
       <!--query type-->
 
-      <fieldset class="field">
+      <fieldset>
         <legend>Query Type</legend>
 
-        <label for="general-enquiry">General Enquiry</label>
-        <input type="radio" name="query-type" id="general-enquiry" required>
-
-        <label for="support-request">Support Request</label>
-        <input type="radio" name="query-type" id="support-request" required>
+        <div class="radiofix">
+          <div class="radioption">
+            <input type="radio" name="query-type" id="general-enquiry" required>
+            <label for="general-enquiry">General Enquiry</label>
+          </div>
+          <div class="radioption">
+            <input type="radio" name="query-type" id="support-request" required>
+            <label for="support-request">Support Request</label>
+          </div>
+          </div>
 
         <span class="error">Please select a query type</span>
       </fieldset>
 
       <!--message-->
 
-      <div class="fullfield">
+      <div class="commentfield">
 
         <label for="message">Message</label>
         <textarea id="message" required></textarea>
@@ -83,7 +88,7 @@
 
       <!--checkbox-->
 
-      <div class="fullfield">
+      <div class="checkboxfield">
         <input type="checkbox" id="consent" required>
         <label for="consent">I consent to being contacted by the team</label>
         <span class="error">To submit this form, please consent to being contacted</span>
@@ -96,8 +101,11 @@
 
 <!--success message-->
 
-    <div role="alert" class="success hidden">
-      <h3>Message sent!</h3>
+    <div role="alert" class="success">
+      <div class="success-bg">
+        <img src="./assets/images/icon-success-check.svg" alt="success icon">
+        <h3>Message sent!</h3>
+      </div>
       <p>Thanks for completing the form. We'll be in touch soon!</p>
     </div>
 
