@@ -219,7 +219,7 @@ input:focus, textarea:focus, button:focus {
 }
 
 .error-input {
-    border-color: var(--red);
+    border-color: var(--red) !important;
 }
 
 .attribution { font-size: 0.6875rem; text-align: center; margin-top: 1rem; }
