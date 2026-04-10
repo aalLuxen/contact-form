@@ -98,6 +98,7 @@ form.addEventListener('submit', function(e) {
             document.querySelector('.success').style.animation = 'slideUp 0.5s ease forwards';
             setTimeout(function() {
                 document.querySelector('.success').style.display = 'none';
+                document.querySelector('.success').style.animation = '';
             }, 400);
         }, 5000);
         form.reset();
