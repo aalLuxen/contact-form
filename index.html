@@ -51,8 +51,8 @@
       <div class="emailfield">
 
         <label for="email-address">Email Address</label>
-        <input id="email-address" type="text" autocomplete="email">
-        <span class="error" id="email-format-error">Please enter a valid email address</span>
+        <input id="email-address" type="email" autocomplete="email" aria-describedby="email-format-error" required>
+        <span class="error" id="email-format-error" aria-live="polite">Please enter a valid email address</span>
         <span class="error" id="email-required-error">This field is required</span>
 
       </div>
