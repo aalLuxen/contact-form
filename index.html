@@ -31,7 +31,7 @@
       <div class="namesfield">
 
         <label for="first-name">First Name</label>
-        <input id="first-name" type="text">
+        <input id="first-name" type="text" autocomplete="given-name">
         <span class="error">This field is required</span>
 
       </div>
@@ -41,7 +41,7 @@
       <div class="namesfield">
 
         <label for="last-name">Last Name</label>
-        <input id="last-name" type="text">
+        <input id="last-name" type="text" autocomplete="family-name">
         <span class="error">This field is required</span>
 
       </div>
@@ -51,9 +51,9 @@
       <div class="emailfield">
 
         <label for="email-address">Email Address</label>
-        <input id="email-address" type="email">
-        <span class="error">Please enter a valid email address</span>
-        <span class="error">This field is required</span>
+        <input id="email-address" type="text" autocomplete="email">
+        <span class="error" id="email-format-error">Please enter a valid email address</span>
+        <span class="error" id="email-required-error">This field is required</span>
 
       </div>
 
@@ -102,6 +102,7 @@
 <!--success message-->
 
     <div role="alert" class="success">
+      <div class="progress-bar"></div>
       <div class="success-bg">
         <img src="./assets/images/icon-success-check.svg" alt="success icon">
         <h3>Message sent!</h3>

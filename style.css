@@ -193,6 +193,7 @@ input:focus, textarea:focus, button:focus {
     left: 50%;
     transform: translateX(-50%);
     display: none;
+    animation: slideDown 0.5s ease;
 }
 
 .success.visible {
@@ -207,6 +208,46 @@ input:focus, textarea:focus, button:focus {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: var(--green-600);
+    width: 100%;
+    animation: shrink 5s linear forwards;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin: -1.7rem -1.7rem 0 -1.7rem;
+}
+
+@keyframes shrink {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50%) translateY(-100px);
+        opacity: 0;
+    }
 }
 
 .error {
@@ -244,5 +285,10 @@ input:focus, textarea:focus, button:focus {
 
     .radiofix {
         flex-direction: column;
+    }
+
+    .success {
+        width: 75%;
+        padding: 1rem;
     }
 }
