@@ -94,8 +94,10 @@ form.addEventListener('submit', function(e) {
 
     if (isValid) {
         const success = document.querySelector('.success');
+        success.setAttribute('aria-live', 'assertive');
         success.setAttribute('role', 'alert');
         success.style.display = 'flex';
+        success.focus();
         setTimeout(function() {
             success.style.animation = 'slideUp 0.5s ease forwards';
             setTimeout(function() {
