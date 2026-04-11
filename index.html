@@ -32,7 +32,7 @@
 
         <label for="first-name">First Name</label>
         <input id="first-name" type="text" autocomplete="given-name" aria-describedby="first-name-error" required>
-        <span class="error" id="first-name-error" aria-live="polite">This field is required</span>
+        <span class="error" id="first-name-error">This field is required</span>
 
       </div>
 
@@ -42,7 +42,7 @@
 
         <label for="last-name">Last Name</label>
         <input id="last-name" type="text" autocomplete="family-name" aria-describedby="last-name-error" required>
-        <span class="error" id="last-name-error" aria-live="polite">This field is required</span>
+        <span class="error" id="last-name-error">This field is required</span>
 
       </div>
 
@@ -52,8 +52,8 @@
 
         <label for="email-address">Email Address</label>
         <input id="email-address" type="email" autocomplete="email" aria-describedby="email-format-error email-required-error" required>
-        <span class="error" id="email-format-error" aria-live="polite">Please enter a valid email address</span>
-        <span class="error" id="email-required-error" aria-live="polite">This field is required</span>
+        <span class="error" id="email-format-error">Please enter a valid email address</span>
+        <span class="error" id="email-required-error">This field is required</span>
 
       </div>
 
@@ -73,7 +73,7 @@
           </div>
           </div>
 
-        <span class="error" id="query-type-error" aria-live="polite">Please select a query type</span>
+        <span class="error" id="query-type-error">Please select a query type</span>
       </fieldset>
 
       <!--message-->
@@ -82,7 +82,7 @@
 
         <label for="message">Message</label>
         <textarea id="message" name="message" aria-describedby="message-error" required></textarea>
-        <span class="error" id="message-error" aria-live="polite">This field is required</span>
+        <span class="error" id="message-error">This field is required</span>
 
       </div>
 
@@ -91,7 +91,7 @@
       <div class="checkboxfield">
         <input type="checkbox" id="consent" aria-describedby="consent-error" required>
         <label for="consent">I consent to being contacted by the team</label>
-        <span class="error" id="consent-error" aria-live="polite">To submit this form, please consent to being contacted</span>
+        <span class="error" id="consent-error">To submit this form, please consent to being contacted</span>
       </div>
 
       <!--submit button-->
@@ -101,7 +101,7 @@
 
 <!--success message-->
 
-    <div role="alert" class="success">
+    <div class="success">
       <div class="progress-bar"></div>
       <div class="success-bg">
         <img src="./assets/images/icon-success-check.svg" alt="success icon">

@@ -93,12 +93,14 @@ form.addEventListener('submit', function(e) {
     }
 
     if (isValid) {
-        document.querySelector('.success').style.display = 'flex';
+        const success = document.querySelector('.success');
+        success.setAttribute('role', 'alert');
+        success.style.display = 'flex';
         setTimeout(function() {
-            document.querySelector('.success').style.animation = 'slideUp 0.5s ease forwards';
+            success.style.animation = 'slideUp 0.5s ease forwards';
             setTimeout(function() {
-                document.querySelector('.success').style.display = 'none';
-                document.querySelector('.success').style.animation = '';
+                success.style.display = 'none';
+                success.style.animation = '';
             }, 400);
         }, 5000);
         form.reset();
