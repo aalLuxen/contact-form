@@ -96,19 +96,20 @@ form.addEventListener('submit', function(e) {
     }
 
     if (queryType === null) {
-        document.querySelector('fieldset .error').classList.add('visible');
-        document.querySelectorAll('.radioption').forEach(function(option) {
-            option.classList.add('error-input');
-        });
-        isValid = false;
-    }
+    const fieldsetError = document.querySelector('fieldset .error');
+    if (fieldsetError) fieldsetError.classList.add('visible');
+    document.querySelectorAll('.radioption').forEach(function(option) {
+        option.classList.add('error-input');
+    });
+    isValid = false;
+}
 
     if (isValid) {
         const success = document.querySelector('.success');
         success.setAttribute('aria-live', 'assertive');
         success.setAttribute('role', 'alert');
         success.style.display = 'flex';
-        success.focus();
+        if (success) success.focus();
         setTimeout(function() {
             success.style.animation = 'slideUp 0.5s ease forwards';
             setTimeout(function() {
@@ -118,6 +119,4 @@ form.addEventListener('submit', function(e) {
         }, 5000);
         form.reset();
     }
-
-    console.log('Form submitted');
 });
