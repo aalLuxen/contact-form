@@ -31,7 +31,7 @@
       <div class="namesfield">
 
         <label for="first-name">First Name</label>
-        <input id="first-name" name="first-name" type="text" autocomplete="given-name" aria-describedby="first-name-error" required>
+        <input id="first-name" name="first-name" type="text" autocomplete="given-name" aria-describedby="first-name-error" aria-required="true">
         <span class="error" id="first-name-error" role="alert">This field is required</span>
 
       </div>
@@ -41,7 +41,7 @@
       <div class="namesfield">
 
         <label for="last-name">Last Name</label>
-        <input id="last-name" name="last-name" type="text" autocomplete="family-name" aria-describedby="last-name-error" required>
+        <input id="last-name" name="last-name" type="text" autocomplete="family-name" aria-describedby="last-name-error" aria-required="true">
         <span class="error" id="last-name-error" role="alert">This field is required</span>
 
       </div>
@@ -51,7 +51,7 @@
       <div class="emailfield">
 
         <label for="email-address">Email Address</label>
-        <input id="email-address" name="email-address" type="email" autocomplete="email" aria-describedby="email-error" required>
+        <input id="email-address" name="email-address" type="email" autocomplete="email" aria-describedby="email-error" aria-required="true">
         <span class="error" id="email-error" role="alert"></span>
       </div>
 
@@ -62,7 +62,7 @@
 
         <div class="radiofix">
           <div class="radioption">
-            <input type="radio" name="query-type" id="general-enquiry" value="general" aria-describedby="query-type-error" required>
+            <input type="radio" name="query-type" id="general-enquiry" value="general" aria-describedby="query-type-error" aria-required="true">
             <label for="general-enquiry">General Enquiry</label>
           </div>
           <div class="radioption">
@@ -79,7 +79,7 @@
       <div class="commentfield">
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" aria-describedby="message-error" required></textarea>
+        <textarea id="message" name="message" aria-describedby="message-error" aria-required="true"></textarea>
         <span class="error" id="message-error" role="alert">This field is required</span>
 
       </div>
@@ -87,7 +87,7 @@
       <!--checkbox-->
 
       <div class="checkboxfield">
-        <input type="checkbox" id="consent" name="consent" value="true" aria-describedby="consent-error" required>
+        <input type="checkbox" id="consent" name="consent" value="true" aria-describedby="consent-error" aria-required="true">
         <label for="consent">I consent to being contacted by the team</label>
         <span class="error" id="consent-error" role="alert">To submit this form, please consent to being contacted</span>
       </div>
