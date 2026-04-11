@@ -33,17 +33,16 @@ main {
     max-width: 750px;
 }
 
+main h1 {
+    text-align: left;
+    color: var(--grey-900);
+    margin-bottom: 1rem;
+}
+
 form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-}
-
-form h1 {
-    grid-column: 1 / -1;
-    text-align: left;
-    color: var(--grey-900);
-    margin-bottom: 1rem;
 }
 
 input {
@@ -176,7 +175,7 @@ button:hover {
 }
 
 input:focus, textarea:focus, button:focus {
-    outline: none;
+    outline: 2px solid var(--green-600);
     border-color: var(--green-600);
 }
 
@@ -259,8 +258,8 @@ input:focus, textarea:focus, button:focus {
     color: var(--red);
 }
 
-.error-input {
-    border-color: var(--red) !important;
+input.error-input, textarea.error-input {
+    border-color: var(--red);
 }
 
 .attribution { font-size: 0.6875rem; text-align: center; margin-top: 1rem; }
@@ -270,7 +269,7 @@ input:focus, textarea:focus, button:focus {
 /*Responsive*/
 
 
-@media (max-width: 375px) {
+@media (max-width: 23.4375em) {
     body {
         padding: 2rem;
     }
@@ -290,5 +289,10 @@ input:focus, textarea:focus, button:focus {
     .success {
         width: 75%;
         padding: 1rem;
+    }
+
+    .progress-bar {
+        width: 100;
+        margin: -1rem -1rem 0 -1rem;
     }
 }
