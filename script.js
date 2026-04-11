@@ -45,7 +45,8 @@ document.querySelectorAll('input[name="query-type"]').forEach(function(radio) {
         document.querySelectorAll('.radioption').forEach(function(option) {
             option.classList.remove('error-input');
         });
-        document.querySelector('fieldset .error').classList.remove('visible');
+        const fieldsetError = document.querySelector('fieldset .error');
+        if (fieldsetError) fieldsetError.classList.remove('visible');
     });
 });
 
@@ -59,13 +60,15 @@ form.addEventListener('submit', function(e) {
 
     if (firstName.value.trim() === '') {
         firstName.classList.add('error-input');
-        firstName.nextElementSibling.classList.add('visible');
+        const error = firstName.nextElementSibling;
+        if (error) error.classList.add('visible');
         isValid = false;
     }
 
     if (lastName.value.trim() === '') {
         lastName.classList.add('error-input');
-        lastName.nextElementSibling.classList.add('visible');
+        const error = lastName.nextElementSibling;
+        if (error) error.classList.add('visible');
         isValid = false;
     }
 
@@ -81,12 +84,14 @@ form.addEventListener('submit', function(e) {
 
     if (message.value.trim() === '') {
         message.classList.add('error-input');
-        message.nextElementSibling.classList.add('visible');
+        const error = message.nextElementSibling;
+        if (error) error.classList.add('visible');
         isValid = false;
     }
 
     if (!consent.checked) {
-        document.querySelector('#consent ~ .error').classList.add('visible');
+        const error = document.querySelector('#consent ~ .error');
+        if (error) error.classList.add('visible');
         isValid = false;
     }
 
