@@ -64,11 +64,11 @@
 
         <div class="radiofix">
           <div class="radioption">
-            <input type="radio" name="query-type" id="general-enquiry" aria-describedby="query-type-error" required>
+            <input type="radio" name="query-type" id="general-enquiry" value="general" aria-describedby="query-type-error" required>
             <label for="general-enquiry">General Enquiry</label>
           </div>
           <div class="radioption">
-            <input type="radio" name="query-type" id="support-request" aria-describedby="query-type-error">
+            <input type="radio" name="query-type" id="support-request" value="support" aria-describedby="query-type-error">
             <label for="support-request">Support Request</label>
           </div>
           </div>
@@ -89,7 +89,7 @@
       <!--checkbox-->
 
       <div class="checkboxfield">
-        <input type="checkbox" id="consent" name="consent" aria-describedby="consent-error" required>
+        <input type="checkbox" id="consent" name="consent" value="true" aria-describedby="consent-error" required>
         <label for="consent">I consent to being contacted by the team</label>
         <span class="error" id="consent-error" role="alert">To submit this form, please consent to being contacted</span>
       </div>
