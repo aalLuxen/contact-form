@@ -35,7 +35,8 @@ message.addEventListener('input', function() {
 
 consent.addEventListener('change', function() {
         if (consent.checked) {
-            document.querySelector('#consent ~ .error').classList.remove('visible');
+            const error = document.querySelector('#consent ~ .error');
+            if (error) error.classList.remove('visible');
         }
     });
 
@@ -72,7 +73,7 @@ form.addEventListener('submit', function(e) {
         document.querySelector('#email-error').textContent = 'This field is required';
         document.querySelector('#email-error').classList.add('visible');
         isValid = false;
-    } else if (!emailRegex.test(emailAddress.value.trim)) {
+    } else if (!emailRegex.test(emailAddress.value.trim())) {
         document.querySelector('#email-error').textContent = 'Please enter a valid email address';
         document.querySelector('#email-error').classList.add('visible');
         isValid = false;
