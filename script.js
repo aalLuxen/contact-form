@@ -9,23 +9,28 @@ const consent = document.querySelector('#consent');
 
 firstName.addEventListener('input', function() {
         firstName.classList.remove('error-input');
-        firstName.nextElementSibling.classList.remove('visible');
+        if (firstName.nextElementSibling) {
+            firstName.nextElementSibling.classList.remove('visible');
+        }    
     });
 
 lastName.addEventListener('input', function() {
         lastName.classList.remove('error-input');
-        lastName.nextElementSibling.classList.remove('visible');
+        if (lastName.nextElementSibling) {
+            lastName.nextElementSibling.classList.remove('visible');
+        }
     });
 
 emailAddress.addEventListener('input', function() {
         emailAddress.classList.remove('error-input');
-        document.querySelector('#email-required-error').classList.remove('visible');
-        document.querySelector('#email-format-error').classList.remove('visible');
+        document.querySelector('#email-error').classList.remove('visible');
     });
 
 message.addEventListener('input', function() {
         message.classList.remove('error-input');
-        message.nextElementSibling.classList.remove('visible');
+        if (message.nextElementSibling) {
+            message.nextElementSibling.classList.remove('visible');
+        }
     });
 
 consent.addEventListener('change', function() {
@@ -67,7 +72,7 @@ form.addEventListener('submit', function(e) {
         document.querySelector('#email-error').textContent = 'This field is required';
         document.querySelector('#email-error').classList.add('visible');
         isValid = false;
-    } else if (!emailRegex.test(emailAddress.value)) {
+    } else if (!emailRegex.test(emailAddress.value.trim)) {
         document.querySelector('#email-error').textContent = 'Please enter a valid email address';
         document.querySelector('#email-error').classList.add('visible');
         isValid = false;
