@@ -64,12 +64,12 @@ form.addEventListener('submit', function(e) {
     }
 
     if (emailAddress.value.trim() === '') {
-        emailAddress.classList.add('error-input');
-        document.querySelector('#email-required-error').classList.add('visible');
+        document.querySelector('#email-error').textContent = 'This field is required';
+        document.querySelector('#email-error').classList.add('visible');
         isValid = false;
     } else if (!emailRegex.test(emailAddress.value)) {
-        emailAddress.classList.add('error-input');
-        document.querySelector('#email-format-error').classList.add('visible');
+        document.querySelector('#email-error').textContent = 'Please enter a valid email address';
+        document.querySelector('#email-error').classList.add('visible');
         isValid = false;
     }
 
