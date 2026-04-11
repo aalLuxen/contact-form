@@ -7,43 +7,45 @@ const message = document.querySelector('#message');
 const consent = document.querySelector('#consent');
 
 
-firstName.addEventListener('input', function() {
+if (form && firstName && lastName && emailAddress && message && consent) {
+
+    firstName.addEventListener('input', function() {
         firstName.classList.remove('error-input');
         if (firstName.nextElementSibling) {
             firstName.nextElementSibling.classList.remove('visible');
-        }    
+        }
     });
 
-lastName.addEventListener('input', function() {
+    lastName.addEventListener('input', function() {
         lastName.classList.remove('error-input');
         if (lastName.nextElementSibling) {
             lastName.nextElementSibling.classList.remove('visible');
         }
     });
 
-emailAddress.addEventListener('input', function() {
+    emailAddress.addEventListener('input', function() {
         emailAddress.classList.remove('error-input');
         document.querySelector('#email-error').classList.remove('visible');
     });
 
-message.addEventListener('input', function() {
+    message.addEventListener('input', function() {
         message.classList.remove('error-input');
         if (message.nextElementSibling) {
             message.nextElementSibling.classList.remove('visible');
         }
     });
 
-consent.addEventListener('change', function() {
+    consent.addEventListener('change', function() {
         if (consent.checked) {
             const error = document.querySelector('#consent ~ .error');
             if (error) error.classList.remove('visible');
         }
     });
 
-document.querySelectorAll('input[name="query-type"]').forEach(function(radio) {
-    radio.addEventListener('change', function() {
-        document.querySelectorAll('.radioption').forEach(function(option) {
-            option.classList.remove('error-input');
+    document.querySelectorAll('input[name="query-type"]').forEach(function(radio) {
+        radio.addEventListener('change', function() {
+            document.querySelectorAll('.radioption').forEach(function(option) {
+                option.classList.remove('error-input');
         });
         const fieldsetError = document.querySelector('fieldset .error');
         if (fieldsetError) fieldsetError.classList.remove('visible');
@@ -51,8 +53,9 @@ document.querySelectorAll('input[name="query-type"]').forEach(function(radio) {
 });
 
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+}
 
     let isValid = true;
     const queryType = document.querySelector('input[name="query-type"]:checked');
@@ -105,11 +108,12 @@ form.addEventListener('submit', function(e) {
 }
 
     if (isValid) {
-        const success = document.querySelector('.success');
+    const success = document.querySelector('.success');
+    if (success) {
         success.setAttribute('aria-live', 'assertive');
         success.setAttribute('role', 'alert');
         success.style.display = 'flex';
-        if (success) success.focus();
+        success.focus();
         setTimeout(function() {
             success.style.animation = 'slideUp 0.5s ease forwards';
             setTimeout(function() {
@@ -117,6 +121,7 @@ form.addEventListener('submit', function(e) {
                 success.style.animation = '';
             }, 400);
         }, 5000);
-        form.reset();
     }
+    form.reset();
+}
 });
